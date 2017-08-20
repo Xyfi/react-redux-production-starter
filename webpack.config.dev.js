@@ -34,23 +34,24 @@ module.exports = {
                 exclude: /node_modules/,
             },
             {
-                test: /\.module.css$/,
+                test: /\.scss$/,
                 use: [{
-                    loader: "style-loader"
+                    loader: "style-loader",
+                    options: {
+                        sourceMap: true
+                    }
                 }, {
                     loader: "css-loader",
                     options: {
                         modules: true,
-                        localIdentName: "[name]__[local]___[hash:base64:5]"
+                        localIdentName: "[name]__[local]__[hash:base64:5]",
+                        sourceMap: true
                     }
-                }]
-            },
-            {
-                test: /^((?!\.module).)*css$/,
-                use: [{
-                    loader: "style-loader"
                 }, {
-                    loader: "css-loader"
+                    loader: "sass-loader",
+                    options: {
+                        sourceMap: true
+                    }
                 }]
             },
             {

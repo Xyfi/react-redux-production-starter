@@ -29,28 +29,19 @@ module.exports = {
                 exclude: /node_modules/,
             },
             {
-                test: /\.module.css$/,
+                test: /\.scss$/,
                 use: ExtractTextPlugin.extract({
                     fallback: "style-loader",
-                    use: {
+                    use: [ {
                         loader: "css-loader",
                         options: {
                             modules: true,
-                            localIdentName: "[hash:base64:5]"
+                            localIdentName: "[hash:base64:5]",
+                            minimize: true
                         }
-                    }
-                })
-            },
-            {
-                test: /^((?!\.module).)*css$/,
-                use: ExtractTextPlugin.extract({
-                    fallback: "style-loader",
-                    use: {
-                        loader: "css-loader",
-                        options: {
-                            minimize: "true"
-                        }
-                    }
+                    }, {
+                        loader: "sass-loader"
+                    } ]
                 })
             },
             {

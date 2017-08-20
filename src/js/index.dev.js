@@ -2,8 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { AppContainer } from "react-hot-loader";
 
-import "../css-global";
-
 import App from "./App"
 import TopLevelComponents from "./TopLevelComponents";
 import DevTools from "./DevTools";
