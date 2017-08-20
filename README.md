@@ -8,6 +8,10 @@ A boilerplate project with extensive capabilities while also inclusing a product
 
 Build your project for production with `npm run build`. The output will be put in `dist`.
 
+## Production build
+1. Run `npm build`
+2. To see your production build in action run `npm start` and open the browser on `http://localhost:8080`
+
 ## Implemented libraries
 The following libraries are included and implemented so you can start coding immediatly
 * React
@@ -17,7 +21,7 @@ The following libraries are included and implemented so you can start coding imm
 
 ## Development features:
 The following development tools and features are used
-* Hot reloading (with `webpack-dev-server`)
+* React hot reloading (with `webpack-dev-server`)
 * Redux DevTools (Open them by pressing `ctrl+H`)
-* Global css + css modules
+* Scss modules
 * Various other loaders (.jpg, .png, .woff|woff2, .ttf, .eot, .svg)
