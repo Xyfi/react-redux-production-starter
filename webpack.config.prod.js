@@ -10,6 +10,7 @@ const srcPath = path.resolve(__dirname, "src");
 module.exports = {
     context: srcPath,
     entry: [
+        "babel-polyfill",
         "./js/index.prod.js"
     ],
     devtool: "source-map",

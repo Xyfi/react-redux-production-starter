@@ -10,6 +10,8 @@ module.exports = {
     devtool: "eval",
     target: "web",
     entry: [
+        "babel-polyfill",
+
         // Hot reloading
         "react-hot-loader/patch",
         "webpack-dev-server/client?http://localhost:8080",
