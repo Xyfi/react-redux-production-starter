@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { hot } from "react-hot-loader";
 
 // Global styles
 import "../global-styles/main.scss";
@@ -14,4 +15,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default hot(module)(App);

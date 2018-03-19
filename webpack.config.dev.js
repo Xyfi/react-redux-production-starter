@@ -28,10 +28,13 @@ module.exports = {
         rules: [
             {
                 test: /\.jsx?$/,
-                use: [
-                    'babel-loader',
-                ],
-                exclude: /node_modules/,
+                use: [ {
+                    loader: 'babel-loader',
+                    options: {
+                        cacheDirectory: true
+                    }
+                } ],
+                include: srcPath
             },
             {
                 test: /\.scss$/,
