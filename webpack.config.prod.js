@@ -123,9 +123,6 @@ module.exports = {
         new CopyWebpackPlugin([
             { from: "static" },
         ]),
-        new webpack.optimize.UglifyJsPlugin({
-            compress: { warnings: false }
-        }),
         new webpack.DefinePlugin({
             "process.env": {
                 "NODE_ENV": JSON.stringify("production")
@@ -137,6 +134,6 @@ module.exports = {
         new HtmlWebpackPlugin({
             inject: "body",
             template: "index.template.ejs"
-        })
+        }),
     ]
 };
