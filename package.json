@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "webpack --mode=production --config ./webpack.config.prod.js",
     "start": "node ./server",
     "dev": "webpack-dev-server --mode=development --config webpack.config.dev.js",
@@ -28,17 +28,23 @@
   "homepage": "https://github.com/Xyfi/react-redux-production-starter#readme",
   "devDependencies": {
     "babel-core": "^6.26.0",
+    "babel-jest": "^22.4.3",
     "babel-loader": "^7.1.4",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "copy-webpack-plugin": "4.5.1",
     "css-loader": "^0.28.4",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "express": "^4.15.3",
     "express-history-api-fallback": "^2.2.1",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.1.0",
+    "jest": "^22.4.3",
+    "jest-cli": "^22.4.3",
+    "jest-enzyme": "^6.0.0",
     "node-sass": "^4.5.3",
     "react-hot-loader": "4.0.0",
     "redux-devtools": "3.4.1",
@@ -54,6 +60,7 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
+    "classnames": "^2.2.5",
     "history": "^4.6.3",
     "prop-types": "^15.6.1",
     "react": "^16.3.0",
@@ -63,5 +70,11 @@
     "react-router-redux": "^5.0.0-alpha.9",
     "redux": "^3.7.1",
     "redux-thunk": "^2.2.0"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "./src/testing/tests/setup.js",
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    }
   }
 }

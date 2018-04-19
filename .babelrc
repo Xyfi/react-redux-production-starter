@@ -8,5 +8,16 @@
   "plugins": [
     "react-hot-loader/babel",
     "syntax-dynamic-import"
-  ]
+  ],
+  "env": {
+    "test": {
+      "presets": [ 
+        [ "env", {
+            "targets": {
+              "node": "current"
+            }
+        } ]
+      ]
+    }
+  }
 }
